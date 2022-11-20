@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class Handle {
     public static Bank bb=new Bank();//引入Bank类
     public static tool tt=new tool();//引入tool类
-    public static IFTRUE iftrue=new IFTRUE();
-    public Date date=new Date();
-    public java.sql.Date sql_date=new java.sql.Date(date.getTime());//返回ms级时间
+    public static Identify iftrue=new Identify();
+//    public Date date=new Date();
+//    public java.sql.Date sql_date=new java.sql.Date(date.getTime());//返回ms级时间
 
     public void Login() throws SQLException {//登录系统
         Scanner sc=new Scanner(System.in);
