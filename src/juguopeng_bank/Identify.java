@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class Identify {//输入密码判断是否和数据库内对立
     Connect connect=new Connect();//引入数据库连接类
-    public boolean PanDuan(Person p) throws SQLException {
+    public boolean Identify(Person p) throws SQLException {
         connect.setConn();
         String sql = "Select password From pass where NAME = ?";//sql出错
         PreparedStatement pstmt = Connect.conn.prepareStatement(sql);
@@ -24,9 +24,5 @@ public class Identify {//输入密码判断是否和数据库内对立
         pstmt.close();
         Connect.conn.close();
         return false;
-
-
-
-
     }
 }

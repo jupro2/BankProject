@@ -1,13 +1,11 @@
 package juguopeng_bank;
 import java.sql.SQLException;
-import java.util.Date;
 import java.util.Scanner;
 public class Handle {
     public static Bank bb=new Bank();//引入Bank类
     public static tool tt=new tool();//引入tool类
     public static Identify iftrue=new Identify();
-//    public Date date=new Date();
-//    public java.sql.Date sql_date=new java.sql.Date(date.getTime());//返回ms级时间
+
 
     public void Login() throws SQLException {//登录系统
         Scanner sc=new Scanner(System.in);
@@ -66,7 +64,7 @@ public class Handle {
                     p2.setPassword(password);
                     p2.setName(name);
 
-                    if(iftrue.PanDuan(p2)){
+                    if(iftrue.Identify(p2)){
                         bb.AccountCancellation(p2);
                         break;
                     }
@@ -84,7 +82,7 @@ public class Handle {
                     System.out.println("请输入密码");
                     int password=sc.nextInt();
                     p3.setPassword(password);
-                    if(iftrue.PanDuan(p3)){
+                    if(iftrue.Identify(p3)){
                         bb.Saving(p3);
                         break;
                     }
@@ -102,7 +100,7 @@ public class Handle {
                     p4.setPassword(password);
 
 
-                    if(iftrue.PanDuan(p4)){
+                    if(iftrue.Identify(p4)){
                         bb.Withdrawal(p4);
                         break;
                     }
@@ -118,7 +116,7 @@ public class Handle {
                     p5.Name= sc.next();
                     System.out.println("请输入密码：");
                     p5.password= sc.nextInt();
-                    if(iftrue.PanDuan(p5)){
+                    if(iftrue.Identify(p5)){
                         bb.Look(p5);
                         break;
                     }
@@ -133,7 +131,7 @@ public class Handle {
                     p6.Name= sc.next();
                     System.out.println("请输入密码：");
                     p6.password= sc.nextInt();
-                    if(iftrue.PanDuan(p6)){
+                    if(iftrue.Identify(p6)){
                         bb.CheckBill(p6);
                         break;
                     }
